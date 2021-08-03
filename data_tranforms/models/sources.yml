@@ -5,6 +5,11 @@ sources:
     description: "A snowflake db that hold source data"
     database: sales
     schema: public
+    freshness: 
+      warn_after: {count: 1, period: hour} # warn if record "freshness" is more than 1 hour
+      error_after: {count: 1, period: day} # warn if record "freshness" is more than 1 day
+      filter: # will be added as a WHERE clause
+    loaded_at_field: created_at
     tables:
         - name: physical_stores
           description: "Descriptive data for physical shops"
