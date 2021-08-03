@@ -6,6 +6,15 @@ sources:
     database: sales
     schema: public
     tables:
+        - name: physical_stores
+          description: "Descriptive data for physical shops"
+          columns:
+          - name: store_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+                
         - name: store_sales
           description: "Sales data in raw unprocessed form"
           columns:
@@ -27,7 +36,7 @@ sources:
             tests:
                 - unique
                 - not_null
-                
+
           - name: shipping_route
             description: "Route ID for the specific record"
             tests:
