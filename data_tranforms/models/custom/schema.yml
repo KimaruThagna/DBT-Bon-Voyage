@@ -1,0 +1,9 @@
+version: 2
+
+sources: 
+  - name: snowflake_data_source
+    description: "A snowflake db that hold source data"
+    database: sales
+    schema: public
+    tables:
+        -name: store_sales
