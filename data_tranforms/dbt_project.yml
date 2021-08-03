@@ -32,9 +32,16 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/ directory
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
+
+#on-run-start: "{{ pre_ops(project_level }}"
+#on-run-end: "SQL statement you wish to run after project models are run"
+
 models:
   data_tranforms:
+      pre-hook: "{{ pre_ops(model_level }}"
+      post-hook: "SQL statement you wish to run after this  model is run"
       # Applies to all files under models/example/
       example:
+      
           materialized: view
 
