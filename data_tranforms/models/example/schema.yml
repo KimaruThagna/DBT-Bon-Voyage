@@ -3,7 +3,7 @@ version: 2
 
 models:
     - name: custom__store_administation_county
-      description: "Stores and admin boundaries"
+      description: '{{doc("model_description")}}'
       columns:
           - name: county_data.county_code
             description: "County code"

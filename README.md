@@ -10,3 +10,4 @@ Learning DBT
 7. DBT Documentation and serving
 8. DBT Variables
 9. Jinja Templating 
+10. DBT pre/post hooks using raw SQL and Macros
