@@ -18,3 +18,17 @@ sources:
             description: "The primary key for this table"
             tests:
                 - not_null
+
+        - name: store_shipments
+          description: "Shipment data in raw unprocessed form"
+          columns:
+          - name: shipment_id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
+                
+          - name: shipping_route
+            description: "Route ID for the specific record"
+            tests:
+                - not_null
