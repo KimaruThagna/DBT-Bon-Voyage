@@ -18,6 +18,7 @@ final as (
            store_data.store_manager
            store_data.store_id
            county_data.county_name
+           county_data.county_code
            county_data.county_population
            FROM store_data
            LEFT JOIN 

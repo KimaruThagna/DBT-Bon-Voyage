@@ -5,7 +5,7 @@ models:
     - name: custom__store_administation_county
       description: "Stores and admin boundaries"
       columns:
-          - name: county_code
+          - name: county_data.county_code
             description: "County code"
             tests:
                 - unique
