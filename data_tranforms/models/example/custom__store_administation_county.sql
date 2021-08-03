@@ -20,6 +20,7 @@ final as (
            county_data.county_name
            county_data.county_code
            county_data.county_population
+           (county_data.county_code = {{ var('best_county')}}) as is_best_county
            FROM store_data
            LEFT JOIN 
             county_data
