@@ -2,6 +2,24 @@
 version: 2
 
 models:
+    - name: custom__store_administation_county
+      description: "Stores and admin boundaries"
+      columns:
+          - name: county_code
+            description: "County code"
+            tests:
+                - unique
+                - not_null
+                - is_kajiado
+
+    - name: my_first_dbt_model
+      description: "A starter dbt model"
+      columns:
+          - name: id
+            description: "The primary key for this table"
+            tests:
+                - unique
+                - not_null
     - name: my_first_dbt_model
       description: "A starter dbt model"
       columns:
